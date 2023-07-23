@@ -70,16 +70,6 @@ It regularizes the Lipschitz constant of the discriminator by simply clipping th
 Empirically, we observe that a higher `clip_value` allows for generating more target-like images (lower FID) but may hurt the learned equivariance.
 You can also choose the `SNGAN` or `WGAN-GP` framework by modifying the yaml configuration files in `configs`. They are slower but often produce visually better results.
 
-As a sanity check, the three examples should produce domain translators with the following performance.
-Note that the logged intermediate results are evaluated only on a single batch during training for efficiency, thus the FID scores are inflated. 
-Only the results of the final epoch are evaluated on the entire dataset.
-
-| EQ method   | FID         | EQ loss (MSE) |
-|-------------|-------------|---------------|
-| Standard    | 11.1 ± 0.1  | 0.1 ± 0.1     |
-| GroundTruth | 11.1 ± 0.1  | 0.1 ± 0.1     |
-| Contrastive | 11.1 ± 0.1  | 0.1 ± 0.1     |
-
 As another example, you can replace `dataset_src` with `objectron`, and `transform` with `3d`, to train a domain translator that translates objectron images to resemble CIFAR-10 while preserving 3D viewpint changes.
 
 ### Checking Logs and Visualizations
