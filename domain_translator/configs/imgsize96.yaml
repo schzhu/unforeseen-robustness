@@ -1,0 +1,10 @@
+# model options
+num_res_blocks: 3
+image_size: 96
+batch_size: 64
+eq_contrastive_encoder: default96
+
+# logger options
+plot_freq: 10
+ckpt_freq: 10
+print_freq: 50

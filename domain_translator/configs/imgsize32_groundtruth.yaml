@@ -1,0 +1,15 @@
+# domain translator training options
+framework: wgan
+clip_value: 0.03
+w_eq: 1
+eq_method: groundtruth
+
+# model options
+num_res_blocks: 2
+image_size: 32
+batch_size: 256
+
+# logger options
+plot_freq: 10
+ckpt_freq: 10
+print_freq: 50

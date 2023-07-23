@@ -1,0 +1,15 @@
+# robust training options
+framework: transrobust
+w_src: 0.1
+w_xi: 0
+
+# classifier options
+arch: resnet18small
+lr_scheduler_type: cosine
+image_size: 32
+batch_size: 256
+max_epochs: 200
+
+# logger options
+ckpt_freq: 200
+print_freq: 50
